@@ -16,6 +16,10 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :category_id %><br />
+    <%= f.select :category_id, Category.all.collect { |c| [c.title, c.id] } %>
+  </div>
+  <div class="field">
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </div>
